@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react_chat_firebase_2023/static/css/main.24b30afe.css",
+    "main.js": "/react_chat_firebase_2023/static/js/main.d7832760.js",
+    "static/media/kakaofriends.png": "/react_chat_firebase_2023/static/media/kakaofriends.84375bb9f89d79ccd760.png",
+    "static/media/path.png": "/react_chat_firebase_2023/static/media/path.7d00edf73f07bdcecc6d.png",
+    "static/media/kakaostory.png": "/react_chat_firebase_2023/static/media/kakaostory.572f3ce5bf10fbdaac9d.png",
+    "static/media/bg_default.png": "/react_chat_firebase_2023/static/media/bg_default.82687b4e75ad8b89fa96.png",
+    "index.html": "/react_chat_firebase_2023/index.html",
+    "main.24b30afe.css.map": "/react_chat_firebase_2023/static/css/main.24b30afe.css.map",
+    "main.d7832760.js.map": "/react_chat_firebase_2023/static/js/main.d7832760.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24b30afe.css",
+    "static/js/main.d7832760.js"
+  ]
+}
