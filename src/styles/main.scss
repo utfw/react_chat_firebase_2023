@@ -18,6 +18,9 @@ main{
             .profile_name{
               font-size: 20px;
             }
+            .profile_message{
+              background: var(--color1);
+            }
           }
         }
       }
@@ -73,7 +76,7 @@ main{
             border-radius: 5px;
             background: #f0f0f0;
             font-size: 10px;
-            color: #8e3933;
+            color: #333;
           }
         }
       }

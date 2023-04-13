@@ -35,7 +35,7 @@ function Profile() {
     axios.get(photoURL)
     .catch(function (error) {
       if (error.response) {
-        setNewBG('https://firebasestorage.googleapis.com/v0/b/kakao-app-2023.appspot.com/o/bg_default.png?alt=media&token=c6ac03cb-4e98-4cb2-9a4d-933c1ae647a6')
+        setNewBG(defaultProfile.photoURL)
         console.log('이미지 다운로드 오류')
         }
       }

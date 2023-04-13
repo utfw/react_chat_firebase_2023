@@ -28,7 +28,7 @@ body{
           color: #8e9399;
         }
       }
-      .chat_img>a{
+      .chat_img svg{
         font-size: 30px;
         margin-right: 15px;
         color: #513736;
@@ -118,27 +118,31 @@ body{
       }
     }
     .more_app{
+      height: 190px;
       padding: 30px 16px;
       border-radius: 8px 8px 0 0;
       background: #fff;
+      box-sizing: border-box;
       ul{
         display: flex;
         width: 100%;
         li{
-          width: 75px;
+          max-width: 75px;
           max-height: 160px;
           padding: 16px 0;
           border-radius: 8px;
           transition: all .5s ease-in-out;
           box-sizing: border-box;
           &:hover{
-            width: 60%;
+            max-width: 60%;
             background: var(--color1);
             a{
               align-items: start;
               .app__catch{
-                width: 100%;
+                display: inline-flex;
+                width: auto;
                 height: 100%;
+                padding: 0 20px 0 8px;
                 opacity: 1;
               }
             }
@@ -165,10 +169,10 @@ body{
               overflow: hidden;
               width: 0;
               height: 0;
+              box-sizing: border-box;
               opacity: 0;
-              transition: opacity 0.3s linear .7s;
+              transition: opacity 0.3s linear .6s;
               p{
-                padding-left: 8px;
                 text-align: left;
               }
             }

@@ -7,10 +7,14 @@
     padding: 0 40px;   
     border: none;
     border-radius: 2px;
-    background: var(--secondary);
+    background: var(--color1);
     font-weight: bold;
-    color: var(--primary);
+    color: var(--secondary);
     line-height: 3;
     cursor: pointer;
+    &:hover{
+      background: var(--secondary);
+      color: var(--primary);
+    }
   }
 }

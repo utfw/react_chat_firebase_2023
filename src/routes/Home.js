@@ -61,7 +61,8 @@ function Home({user}) { // 로그인 정보를 state로 받아서 유저 정보�
       id: user.uid,
       photoURL: user.photoURL,
       profileURL: defaultFace,
-      comment: defaultComment
+      comment: defaultComment,
+      email: user.email
     })
     console.log(`프로필설정완료`);
     setIsLoading(false);

@@ -77,7 +77,7 @@ function Login() {
   }
 
   return (
-    <div className='login'>
+    <div className={`login ${!newAccount&&('login__active')}`}>
       <h1 className='title'>TALK</h1>
       <form onSubmit={onSubmit} className='input'>
         <ul className='input_wrap'>        
@@ -94,10 +94,9 @@ function Login() {
           <span onClick={accountToggle} >{ newAccount ? "이미 회원이신가요?" : "회원가입 하기"}</span>
         </div>
         <ul className='sns_login'>
-          <li><button onClick={onClick} onMouseEnter={()=>{console.log(1)}} name='google'><FontAwesomeIcon icon={faGoogle} /><span>Google</span></button></li>
-          <li><button onClick={onClick} name='github'><FontAwesomeIcon icon={faGithub} /><span>Github</span></button></li>
+          <li><button onClick={onClick} onMouseEnter={()=>{console.log(1)}} name='google'><FontAwesomeIcon icon={faGoogle} /><span>Sign up with Google</span></button></li>
+          <li><button onClick={onClick} name='github'><FontAwesomeIcon icon={faGithub} /><span>Sign up with Github</span></button></li>
         </ul>
-
       </form>
     </div>
   )
