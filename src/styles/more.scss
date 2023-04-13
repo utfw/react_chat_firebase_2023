@@ -1,0 +1,175 @@
+/* more.css */
+@import url(common.css);
+
+body{
+  .tab_bar>ul>li:nth-child(4)>a{color: #513736;}
+  main.more{
+    background: #fff;
+    .user_info{
+      display: flex;
+      align-items: center;
+      height: 72px;
+      border-bottom: 1px solid #ebebeb;
+      .profile_img{
+        width: 50px;
+        height: 50px;
+      }
+      .profile_info{
+        flex: 1;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .profile_name{
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .profile_email{
+          color: #8e9399;
+        }
+      }
+      .chat_img>a{
+        font-size: 30px;
+        margin-right: 15px;
+        color: #513736;
+      }
+    }
+    .user_menu{
+      height: 125px;
+      ul{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        li{
+          overflow: hidden;
+          flex: 1;
+          a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #513736;
+            font-weight: bold;
+            transition: transform 300ms linear;
+            :hover{transform: scale(1.05);}
+            i{
+              font-size: 30px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    .plus_friends{
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #ebebeb;
+      header{
+        height: auto;
+        display: inline-flex;
+        justify-content: space-between;
+        font-size: 16px;
+        padding: 5px 15px;
+        border-bottom: 1px solid #ebebeb;
+        box-sizing: border-box;
+        span{
+          color: #8e9399;
+        }
+      }
+      .plus_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: var(--deactive);
+        padding: 8px 4px 0px;
+        li{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          padding: 0px 4px 8px;
+          box-sizing: border-box;
+          a{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            min-width: 90px;
+            padding: 8px 0;
+            background: #fff;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #333;
+            transition: background .3s linear;
+            box-shadow: 0 0 6px -2px rgba($color: #000000, $alpha: .34);
+            &:hover{
+              color: var(--right);
+              background: var(--color1);
+            }
+            svg{
+              width: 30px;
+              margin: 0 15px 4px;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    .more_app{
+      padding: 30px 16px;
+      border-radius: 8px 8px 0 0;
+      background: #fff;
+      ul{
+        display: flex;
+        width: 100%;
+        li{
+          width: 75px;
+          height: 95px;
+          transition: all .5s ease-in-out;
+          &:hover{
+            width: 60%;
+            border: 1px solid #000;
+            a{
+              align-items: start;
+              .app__catch{
+                width: 100%;
+                opacity: 1;
+              }
+            }
+          }
+          a{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: all .5s ease-in-out;
+            div:first-of-type{
+              width: 75px;
+              height: 100%;
+              span{
+                display: flex;
+                width: 44px;
+                height: 44px;
+                margin: 0 auto 10px;
+                background: url(../images/empty.jpg) no-repeat 0 0;
+                background-size: cover;
+              }
+            }
+            .app__catch{
+              overflow: hidden;
+              width: 0;
+              opacity: 0;
+              transition: opacity 0.3s linear .7s;
+              p{
+                text-align: left;
+              }
+            }
+          }
+        }
+        li:nth-child(1) span{background-image: url(../images/kakaostory.png) !important;}
+        li:nth-child(2) span{background-image: url(../images/path.png) !important;}
+        li:nth-child(3) span{background-image: url(../images/kakaofriends.png) !important;}
+      }
+    }
+  }
+}
