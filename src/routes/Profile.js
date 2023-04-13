@@ -72,6 +72,10 @@ function Profile() {
         await updateProfile(authService.currentUser,{
           displayName: newDisplayName
         })
+        await updateDoc(doc(db, `${authService.currentUser.uid}`, `profile`),{
+          displayName: `${newDisplayName}`,
+          date: Date.now()
+        })
       } catch (error) {
         console.log('error');
       }
@@ -238,7 +242,7 @@ function Profile() {
               {toggleEditing ? ( // 이름, 코멘트 수정 토글
                 <>
                 <span className='profile_name'>
-                  <input type='text' value={newDisplayName} name='profile_name' onChange={onChange} className='user_profile_name' autoFocus maxLength={12} required></input>
+                  <input type='text' value={newDisplayName} name='profile_name' onChange={onChange} className='user_profile_name' autoFocus maxLength={8} required></input>
                 </span>
                 <input type='text' className='profile_comment' name='profile_comment' value={newComment} onChange={onChange}/>
                 </>
