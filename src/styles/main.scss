@@ -23,6 +23,7 @@ main{
       }
     }
     &.section__friends{
+      height: 100%;
       padding-bottom: 60px;
       ul{
         display: flex;
@@ -45,10 +46,10 @@ main{
       &.friend_list{
         padding-top: 5px;
         li{
-          margin: 0 8px 5px;
+          margin: 0 8px 1px;
           transition: transform .2s linear;
           background: #fff;
-          border-radius: 8px;
+          border-radius: 4px;
           &:hover{
             transform: scale(1.01);
           }

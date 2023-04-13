@@ -4,7 +4,7 @@
 @import url(header.scss);
 
 body{font-size: 12px; min-width: 390px;}
-#root{width: 100%;}
+#root{width: 100%;min-height: 100%;}
 main{height: 100%;padding-top: 64px;box-sizing: border-box;}
 a:link, a:visited{color: #000;text-decoration: none;}
 a:hover, a:focus, a:active{color: #000;text-decoration: none;}
@@ -16,10 +16,12 @@ img{position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%);max-w
 :root{
   --primary: #4a00d3;
   --secondary: #ffbe1a;
-  --color1: #0020d3;
+  --color1: #E8EAF6;
   --active :#ad01fc;
   --triadic1: #7410aa;
   --triadic2: #fc2f01;
   --right: #f0f0f0;
-  --deactive: #e8ecf3;
+  --deactive: #f2f5f8;
+  --confirm: #00C853;
+  --cancel: #DD2C00;
 }

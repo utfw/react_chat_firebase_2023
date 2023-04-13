@@ -201,8 +201,8 @@ function Profile() {
         <form onSubmit={onSubmitBG}>
           { toggleBG ? ( // 파일 첨부 시 
             <>
-            <button type='submit' className='edit_bg_btn'>Confirm</button>
-            <button type='button' onClick={onCancelEdit} className='edit_bg_btn' name='bg'>Cancel</button>
+            <button type='submit' className='edit_bg_btn confirm'>Confirm</button>
+            <button type='button' onClick={onCancelEdit} className='edit_bg_btn cancel' name='bg'>Cancel</button>
             </>
           ):( 
             <>
@@ -220,8 +220,8 @@ function Profile() {
           <form onSubmit={onSubmitFace} className='form_face'>
             {toggleFace ? (
             <div className='btn_wrap face'>
-              <button type='button' onClick={onCancelEdit} name='face' className='btn_face cancel'><FontAwesomeIcon icon={faXmark} style={{color:'tomato'}} size='lg'></FontAwesomeIcon></button>
-              <button type='submit' className='btn_face'><FontAwesomeIcon icon={faCheck} style={{color:'green'}} size='lg'></FontAwesomeIcon></button>
+              <button type='button' onClick={onCancelEdit} name='face' className='btn_face cancel'><FontAwesomeIcon icon={faXmark} size='lg'></FontAwesomeIcon></button>
+              <button type='submit' className='btn_face'><FontAwesomeIcon icon={faCheck} size='lg'></FontAwesomeIcon></button>
             </div>
              ): (
               <>
@@ -259,7 +259,7 @@ function Profile() {
                     <button type='button' name='profile' className='icon cancel' onClick={onCancelEdit}>
                     <i><FontAwesomeIcon icon={faXmark} /></i>
                     </button>
-                    Cancel Edit
+                    Cancel
                   </div>
                 </li>
                 <li>
@@ -267,7 +267,7 @@ function Profile() {
                     <button type='submit' id='profileEdit' className='icon confirm'>
                     <i><FontAwesomeIcon icon={faCheck} /></i>
                     </button>
-                    <label htmlFor='profileEdit'>Confirm Edit</label> 
+                    <label htmlFor='profileEdit'>Confirm</label> 
                   </div>
                 </li>
                   </>
@@ -282,8 +282,8 @@ function Profile() {
                   </div>
                 </li>
                 <li>
-                  <div className='profile__btn-wrap'>
-                    <span className='icon' onClick={onClick}>
+                  <div className='profile__btn-wrap' onClick={onClick}>
+                    <span className='icon' >
                     <i><FontAwesomeIcon icon={faPencil} /></i>
                     </span>
                     Edit Profile

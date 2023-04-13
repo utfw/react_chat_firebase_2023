@@ -10,7 +10,7 @@ import { storage } from '../fbase';
 import { v4 as uuidv4 } from 'uuid';
 
 function InputText({name}) {
-  const [text, setText] = useState();
+  const [text, setText] = useState("");
   const [attachment, setAttachment] = useState("");
   const [btnToggle, setBtnToggle] = useState(false);
 

@@ -27,11 +27,11 @@ function App() {
   },[user])
 
   return (
-    <BrowserRouter basename={process.env.Public_URL}> 
+    <BrowserRouter basename={process.env.PUBLIC_URL}> 
       <Routes>
         { isLoggedIn ? (
         <>
-        <Route path='/' element={<Home user={user} />} />
+        <Route index element={<Home user={user} />} />
         <Route path='/Chats' element={<Chats />} />
         <Route path='/Chatting' element={<Chatting />} />
         <Route path='/Find' element={<Find />} />
@@ -39,7 +39,7 @@ function App() {
         <Route path='/Profile' element={<Profile />} />
         </>
         ) : (
-          <Route path='/' element={<Login></Login>} />
+          <Route index element={<Login></Login>} />
         )}
       </Routes>
     </BrowserRouter>

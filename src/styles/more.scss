@@ -67,12 +67,15 @@ body{
         height: auto;
         display: inline-flex;
         justify-content: space-between;
+        align-items: first baseline;
         font-size: 16px;
         padding: 5px 15px;
         border-bottom: 1px solid #ebebeb;
         box-sizing: border-box;
         span{
+          font-size: 12px;
           color: #8e9399;
+
         }
       }
       .plus_list{
@@ -80,13 +83,13 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
         background: var(--deactive);
-        padding: 8px 4px 0px;
+        padding: 4px 6px 0px;
         li{
           display: flex;
           justify-content: center;
           align-items: center;
           width: 50%;
-          padding: 0px 4px 8px;
+          padding: 0px 2px 4px;
           box-sizing: border-box;
           a{
             display: flex;
@@ -96,14 +99,14 @@ body{
             min-width: 90px;
             padding: 8px 0;
             background: #fff;
-            border-radius: 8px;
+            border-radius: 2px;
             font-size: 12px;
             color: #333;
             transition: background .3s linear;
-            box-shadow: 0 0 6px -2px rgba($color: #000000, $alpha: .34);
+            box-shadow: 0 0 6px -4px rgba($color: #000000, $alpha: .34);
             &:hover{
-              color: var(--right);
-              background: var(--color1);
+              color: #fff;
+              background: var(--triadic1);
             }
             svg{
               width: 30px;
@@ -123,15 +126,19 @@ body{
         width: 100%;
         li{
           width: 75px;
-          height: 95px;
+          max-height: 160px;
+          padding: 16px 0;
+          border-radius: 8px;
           transition: all .5s ease-in-out;
+          box-sizing: border-box;
           &:hover{
             width: 60%;
-            border: 1px solid #000;
+            background: var(--color1);
             a{
               align-items: start;
               .app__catch{
                 width: 100%;
+                height: 100%;
                 opacity: 1;
               }
             }
@@ -139,7 +146,6 @@ body{
           a{
             display: flex;
             align-items: center;
-            width: 100%;
             height: 100%;
             text-align: center;
             transition: all .5s ease-in-out;
@@ -158,9 +164,11 @@ body{
             .app__catch{
               overflow: hidden;
               width: 0;
+              height: 0;
               opacity: 0;
               transition: opacity 0.3s linear .7s;
               p{
+                padding-left: 8px;
                 text-align: left;
               }
             }

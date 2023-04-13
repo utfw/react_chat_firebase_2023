@@ -16,7 +16,10 @@ body{
         align-items: center;
         color: var(--triadic1);
         transition: transform 300ms linear;
-        :hover{transform: scale(1.1);}
+        &:hover{
+          transform: scale(1.1);
+          color: var(--secondary);
+        }
         i{
           font-size: 22px;
           margin: 5px 0;

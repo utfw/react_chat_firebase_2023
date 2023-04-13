@@ -38,10 +38,22 @@ function Chatting() {
     <span className='date_info'>Tursday, March 23, 2023</span>
     <div className='chat_box my'>
       <div className='chat_wrap'>
-      <span className='chat_time'>
+        <p className='chat'><span>Hello!</span></p>
+        <span className='chat_time'>
           <span>{hours}</span>:<span>{minutes}</span>
       </span>
-        <p className='chat'><span>Hello!</span></p>
+      </div>
+      <div className='chat_wrap'>
+        <p className='chat'><span>말풍선을 누르면 메시지 수정, 삭제가 가능합니다.</span></p>
+        <span className='chat_time'>
+          <span>{hours}</span>:<span>{minutes}</span>
+      </span>
+      </div>
+      <div className='chat_wrap'>
+        <p className='chat'><span>firebase 문서에 채팅 대상자의 이름값을 저장하여 구분을 할 수 있게 하였습니다.</span></p>
+        <span className='chat_time'>
+          <span>{hours}</span>:<span>{minutes}</span>
+      </span>
       </div>
     </div>
     <div className='chat_box other'>

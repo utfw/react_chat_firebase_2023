@@ -6,7 +6,6 @@ main.chatting{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--right);
   padding-bottom: 80px;
   .date_info{
     opacity: .5;
@@ -90,6 +89,9 @@ main.chatting{
         span{
           display: block;
         }
+      }
+      input.chat{
+        cursor: auto;
       }
       .chat_time{
         opacity: 0.5;
@@ -175,6 +177,7 @@ footer{ // InputText
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    box-shadow: 0 -2px 5px -4px rgba($color: #1e0000, $alpha: 0.56);
   }
   fieldset.text_box{
     position: relative;
@@ -200,13 +203,14 @@ footer{ // InputText
     .text_field{
       flex: 1;
       height: 37px;
+      padding-left: 8px;
       border: 1px solid #bbb;
       border-radius: 8px;
       box-sizing: border-box;
     }
     .text_field:focus{
       outline: none;
-      border: 1px solid #333
+      border: 2px solid var(--primary)
     }
     .emotion_btn{
       position: absolute;
@@ -227,6 +231,10 @@ footer{ // InputText
       line-height: 37px;
       text-align: center;
       cursor: pointer;
+      &[type="submit"]{
+        background: var(--primary);
+        color: var(--secondary);
+      }
     }
   }
 }

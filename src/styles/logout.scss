@@ -6,10 +6,10 @@
   .btn_logout{
     padding: 0 40px;   
     border: none;
-    border-radius: 4px;
-    background: #ffe84c;
+    border-radius: 2px;
+    background: var(--secondary);
     font-weight: bold;
-    color: #513736;
+    color: var(--primary);
     line-height: 3;
     cursor: pointer;
   }

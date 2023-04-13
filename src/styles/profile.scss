@@ -39,7 +39,8 @@ body{
           width: 100%;
           height: 100%;
           >.edit_btn{
-            opacity: .9;
+            z-index: 11;
+            opacity: 1;
             position: absolute;
             left: 5px;
             bottom: calc(4% + 5px);
@@ -50,29 +51,45 @@ body{
             border: none;
             background: transparent;
             font-size: 24px;
-            color: var(--right);
+            color: #fff;
             text-align: center;
             line-height: 32px;
             cursor: pointer;
             box-shadow: 0px 0px 1px -1px #000;
+            &:hover{
+              color: var(--secondary);
+            }
           }
           >input.edit_btn{
             display: none;
           } 
           .edit_bg_btn{ // 수정화면
+            opacity: .8;
             width: 200px;
             height: 60px;
-            background: rgba($color: #4a00d3, $alpha: 0.5);
             border: none;
             border-radius: 20px;
-            color: #fff;
+            background: #efefef;
             font-size: 18px;
             transition: all 0.3s linear;
             box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: .5);
-          }
-          .edit_bg_btn:hover{
-            background: #ffbe1a;
-            border: none;
+            &.confirm{
+              color: var(--confirm);
+            }
+            &.cancel{
+              color: var(--cancel);
+            }
+            &:hover{
+              opacity: 1;
+              &.confirm{
+                color: #fff;
+                background: var(--confirm);
+              }
+              &.cancel{
+                color: #fff;
+                background: var(--cancel);
+              }
+            }
           }
           .edit_bg_btn:first-of-type{
             margin-bottom: 40px;
@@ -110,7 +127,8 @@ body{
               padding: 0 12px;
               border-radius: 50%;
               box-sizing: border-box;
-              background: rgba(0, 0, 0, 0.7);
+              background: rgba(0, 0, 0, 0.3);
+              backdrop-filter: blur(2px);
               .btn_face{
                 display: flex;
                 justify-content: center;
@@ -121,9 +139,21 @@ body{
                 background: transparent;
                 border: none;
                 transition: scale 0.3s ease;
+                &.cancel{
+                  color: var(--cancel);
+                }
+                &[type='submit']{
+                  color: var(--confirm);
+                }
                 &:hover{
-                  background: #fff;
+                  color: #fff;
                   scale: 1.5;
+                  &.cancel{
+                    background: var(--cancel);
+                  }
+                  &[type='submit']{
+                    background: var(--confirm);
+                  }
                 }
               }
             }
@@ -196,7 +226,8 @@ body{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                font-weight: bold;
+                width: 80px;
+
                 .icon{
                   display: block;
                   width: 52px;
@@ -210,12 +241,27 @@ body{
                   color: #2E00FF;
                   font-size: 20px;
                   cursor: pointer;
+                  svg{
+                    transition: all .3s linear;
+                  }
+                  &:hover{
+                    svg{
+                      scale: 1.14;
+                    }
+                  }
                   &.confirm{
-                    background: #1093aa;
-                    color: #fff;
+                    color: var(--confirm);
+                    &:hover{
+                      color: #fff;
+                      background: var(--confirm);
+                    }
                   }
                   &.cancel{
-                    color: #2710aa
+                    color: var(--cancel);
+                    &:hover{
+                      color: #fff;
+                      background: var(--cancel);
+                    }
                   }
                 }
               }
