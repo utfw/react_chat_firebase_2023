@@ -26,6 +26,7 @@ function Chatbubble(props) {
     setEditing(prev => !prev);
     setOldText(newText);
     console.log(`toggle edit`)
+    console.log(newText.length)
   }
 
   const onEditSubmit = async(e) =>{
@@ -49,7 +50,7 @@ function Chatbubble(props) {
     {editing ? (
       <form onSubmit={onEditSubmit}>
         <div className='chat_wrap edit'>
-          <input type='text' onChange={onChange} value={newText} className='chat' autoFocus />
+          <input type='text' onChange={onChange} value={newText} className='chat' autoFocus style={{width:`${newText.length}ch`}}/>
           <div className='btn_wrap'>
             <button type='submit' className='edit' name='submit'><i><FontAwesomeIcon icon={faPencil} />수정</i></button>
             <button type='button' className='delete' onClick={clickDelete}><i><FontAwesomeIcon icon={faEraser} />삭제</i></button>

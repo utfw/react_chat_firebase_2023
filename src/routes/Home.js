@@ -102,7 +102,7 @@ function Home({user}) { // 로그인 정보를 state로 받아서 유저 정보�
       </>
       }
     </main>
-    <Tab main={`on`} />
+    <Tab main={`on`} userInfo={userInfo} />
     </>
   )
 }

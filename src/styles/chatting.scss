@@ -45,6 +45,7 @@ main.chatting{
         }
       }
       .btn_wrap{
+        width: 200px;
         margin-top: 4px;
         justify-content: space-around;
         .edit, .delete{
@@ -80,6 +81,9 @@ main.chatting{
     align-self: flex-end;
     align-items: flex-end;
     margin-left: 10px;
+    form{
+
+    }
     .chat_wrap{
       flex-direction: row-reverse;
       .chat{
@@ -91,6 +95,8 @@ main.chatting{
         }
       }
       input.chat{
+        display: inline-flex;
+        max-width: 400px;
         cursor: auto;
       }
       .chat_time{
