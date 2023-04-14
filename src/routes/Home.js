@@ -35,13 +35,13 @@ function Home({user}) { // 로그인 정보를 state로 받아서 유저 정보�
       })
       try {
         await setDoc(doc(db, `${authService.currentUser.uid}`, `profile`),{
-          displayName: user.displayName,
-          id: user.uid,
-          photoURL: user.photoURL,
-          profileURL: defaultFace,
-          comment: defaultComment,
-          date: Date.now(),
-          fileName:""
+          displayName: user.displayName, // 사용자이름
+          id: user.uid, // 사용자 uid
+          photoURL: user.photoURL, // 프로필 백그라운드
+          profileURL: defaultFace, // 프로필 사진
+          fileName:"", // 프로필 사진 파일이름
+          comment: defaultComment, // 상태메시지
+          date: Date.now() // 업로드 시간
         })
         console.log(`초기 프로필 문서 업로드`)
       } catch (error) {
@@ -51,8 +51,8 @@ function Home({user}) { // 로그인 정보를 state로 받아서 유저 정보�
     try {
       const docRef = doc(db, `${authService.currentUser.uid}`,`profile`);
       const docSnap = await getDoc(docRef); // 문서 정보를 읽음
-      await setDefaultComment(docSnap.data().comment)
-      await setDefaultFace(docSnap.data().profileURL)
+      await setDefaultComment(docSnap.data().comment);
+      await setDefaultFace(docSnap.data().profileURL);
     } catch (error) {
       console.log(error)
     }

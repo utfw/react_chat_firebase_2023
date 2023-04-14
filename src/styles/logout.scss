@@ -7,10 +7,11 @@
     padding: 0 40px;   
     border: none;
     border-radius: 2px;
-    background: var(--color1);
+    background: var(--primary);
     font-weight: bold;
-    color: var(--secondary);
+    color: #fff;
     line-height: 3;
+    transition: all .3s ease-in-out;
     cursor: pointer;
     &:hover{
       background: var(--secondary);

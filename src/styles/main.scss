@@ -46,10 +46,11 @@ main{
       box-sizing: border-box;
     }
     ul{
+      overflow: hidden;
       &.friend_list{
         padding-top: 5px;
         li{
-          margin: 0 8px 1px;
+          margin: 0 0 1px;
           transition: transform .2s linear;
           background: #fff;
           border-radius: 4px;

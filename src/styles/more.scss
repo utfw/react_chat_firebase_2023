@@ -9,6 +9,7 @@ body{
       display: flex;
       align-items: center;
       height: 72px;
+      padding: 10px 0;
       border-bottom: 1px solid #ebebeb;
       .profile_img{
         width: 50px;
@@ -22,7 +23,6 @@ body{
         justify-content: space-around;
         .profile_name{
           font-size: 16px;
-          font-weight: bold;
         }
         .profile_email{
           color: #8e9399;
@@ -31,7 +31,7 @@ body{
       .chat_img svg{
         font-size: 30px;
         margin-right: 15px;
-        color: #513736;
+        color: var(--triadic1);
       }
     }
     .user_menu{
@@ -47,13 +47,17 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #513736;
+            color: var(--color1);
             font-weight: bold;
-            transition: transform 300ms linear;
-            :hover{transform: scale(1.05);}
             i{
               font-size: 30px;
               margin-bottom: 10px;
+              cursor: pointer;
+              transition: all 300ms linear;
+              &:hover{
+                color: var(--triadic1);
+                transform: scale(1.05);
+              }
             }
           }
         }
@@ -83,13 +87,11 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
         background: var(--deactive);
-        padding: 4px 6px 0px;
         li{
           display: flex;
           justify-content: center;
           align-items: center;
           width: 50%;
-          padding: 0px 2px 4px;
           box-sizing: border-box;
           a{
             display: flex;
@@ -103,7 +105,6 @@ body{
             font-size: 12px;
             color: #333;
             transition: background .3s linear;
-            box-shadow: 0 0 6px -4px rgba($color: #000000, $alpha: .34);
             &:hover{
               color: #fff;
               background: var(--triadic1);
@@ -129,9 +130,9 @@ body{
         li{
           max-width: 75px;
           max-height: 160px;
-          padding: 16px 0;
-          border-radius: 8px;
-          transition: all .5s ease-in-out;
+          padding: 16px;
+          border-radius: 4px;
+          transition: max-width .5s ease-in-out;
           box-sizing: border-box;
           &:hover{
             max-width: 60%;
@@ -139,20 +140,22 @@ body{
             a{
               align-items: start;
               .app__catch{
+                opacity: 1;
                 display: inline-flex;
                 width: auto;
                 height: 100%;
                 padding: 0 20px 0 8px;
-                opacity: 1;
+                p{
+                  opacity: 1;
+                }
               }
             }
           }
           a{
             display: flex;
-            align-items: center;
+            align-items: normal;
             height: 100%;
             text-align: center;
-            transition: all .5s ease-in-out;
             div:first-of-type{
               width: 75px;
               height: 100%;
@@ -166,14 +169,15 @@ body{
               }
             }
             .app__catch{
-              overflow: hidden;
+              opacity: 0;
               width: 0;
               height: 0;
               box-sizing: border-box;
-              opacity: 0;
-              transition: opacity 0.3s linear .6s;
               p{
+                opacity: 0;
+                width: 200px;
                 text-align: left;
+                transition: opacity .3s linear .5s;
               }
             }
           }
