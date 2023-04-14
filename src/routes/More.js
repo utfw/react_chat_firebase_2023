@@ -94,7 +94,7 @@ function More() {
             <span className='app_icon'></span>Kakao friends
           </div>
           <div className='app__catch'>
-          <p>그대로의 일상 이야기,<br />카카오스토리</p>
+          <p>WE ARE FRIENDS!<br />일상의 즐거움<br />#카카오프렌즈</p>
         </div>
         </a>
       </li>

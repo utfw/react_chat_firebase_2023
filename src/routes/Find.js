@@ -18,7 +18,7 @@ function Find() {
       <li><a href="#"><i><FontAwesomeIcon icon={faEnvelope} /></i>Invite via SNS</a></li>
     </ul>
     <section className="recommend_section">
-      <header><h2>recommended Friends</h2></header>
+      <header><h2>Recommended Friends</h2></header>
       <ul>
       <li>You have no recommended friends.</li>
       </ul>

@@ -4,7 +4,6 @@ import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider,
 import { authService } from '../fbase';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { useEffect } from 'react';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -75,7 +74,6 @@ function Login() {
 
   const accountToggle = (e) =>{
     setNewAccount(prev => !prev);
-    console.log(newAccount);
   }
 
   return (

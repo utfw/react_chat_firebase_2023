@@ -7,15 +7,15 @@
     padding: 0 40px;   
     border: none;
     border-radius: 2px;
-    background: var(--primary);
+    background: var(--color1);
     font-weight: bold;
-    color: #fff;
+    color: var(--primary);
     line-height: 3;
     transition: all .3s ease-in-out;
     cursor: pointer;
     &:hover{
-      background: var(--secondary);
-      color: var(--primary);
+      background: var(--primary);
+      color: var(--secondary);
     }
   }
 }

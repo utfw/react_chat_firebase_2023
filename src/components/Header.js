@@ -4,18 +4,32 @@ import { faPlane, faWifi, faMoon, faBatteryFull, faGear, faUser } from '@fortawe
 import { faBluetooth } from '@fortawesome/free-brands-svg-icons';
 import '../styles/header.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCallback } from 'react';
+import { useEffect } from 'react';
 
 function Header({left, center, right, num, left_icon, bg}) {
   const navigate = useNavigate();
-  let today = new Date();
+  const [today, setToday] = useState(()=>new Date());
   const [Hour, setHour] = useState(today.getHours());
   const [Minute, setMinute] = useState(today.getMinutes());
   
   const onClickBtn = () => {
     navigate(-1); // 따로 변수로 지정해주지 않고 바로 넣으면 클릭 이벤트에 발생하는게 아니라 페이지 로드 후 자동 이동함. 
   };
+  
+  useEffect(()=>{
+    const timeId = setTimeout(() => {
+      timer();
+      clearTimeout(timer);
+    }, 1000);
+  },[today]);
 
-
+  const timer = () =>{
+    setToday(new Date());
+    setHour(today.getHours());
+    setMinute(today.getMinutes());
+    // console.log(today)
+  }
   return (
     <>
     <header id='header' className={bg}>
