@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react_chat_firebase_2023/static/css/main.ec6b329b.css",
-    "main.js": "/react_chat_firebase_2023/static/js/main.22fff481.js",
+    "main.css": "/react_chat_firebase_2023/static/css/main.c46e831d.css",
+    "main.js": "/react_chat_firebase_2023/static/js/main.cc897bb3.js",
     "static/media/kakaofriends.png": "/react_chat_firebase_2023/static/media/kakaofriends.84375bb9f89d79ccd760.png",
     "static/media/path.png": "/react_chat_firebase_2023/static/media/path.7d00edf73f07bdcecc6d.png",
     "static/media/kakaostory.png": "/react_chat_firebase_2023/static/media/kakaostory.572f3ce5bf10fbdaac9d.png",
     "static/media/bg_default.png": "/react_chat_firebase_2023/static/media/bg_default.82687b4e75ad8b89fa96.png",
     "index.html": "/react_chat_firebase_2023/index.html",
-    "main.ec6b329b.css.map": "/react_chat_firebase_2023/static/css/main.ec6b329b.css.map",
-    "main.22fff481.js.map": "/react_chat_firebase_2023/static/js/main.22fff481.js.map"
+    "main.c46e831d.css.map": "/react_chat_firebase_2023/static/css/main.c46e831d.css.map",
+    "main.cc897bb3.js.map": "/react_chat_firebase_2023/static/js/main.cc897bb3.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec6b329b.css",
-    "static/js/main.22fff481.js"
+    "static/css/main.c46e831d.css",
+    "static/js/main.cc897bb3.js"
   ]
 }
