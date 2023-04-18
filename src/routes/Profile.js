@@ -203,6 +203,8 @@ function Profile() {
         <h2 className='blind'>{newDisplayName}'s Profile backgroud image</h2>
         { id === authService.currentUser.uid && (
         <form onSubmit={onSubmitBG}>
+          <legend className='blind'>프로필 배경 설정</legend>
+          <fieldset className='profile__bg-wrap'>
           { toggleBG ? ( // 파일 첨부 시 
             <>
             <button type='submit' className='edit_bg_btn confirm'>Confirm</button>
@@ -214,6 +216,7 @@ function Profile() {
             <input type='file' onChange={onChangeBG} accept="image/*" id='edit_bg' className='edit_btn' name='profile'></input>
             </>
           )}
+          </fieldset>
         </form>
         ) }
       </section>
@@ -222,6 +225,8 @@ function Profile() {
         <div className='profile_img empty' style={{backgroundImage: `url(${newFace})`, backgroundPosition: `center center`}}>
           { id === authService.currentUser.uid && (
           <form onSubmit={onSubmitFace} className='form_face'>
+            <legend className='blind'>프로필 사진 설정</legend>
+            <fieldset className='profile__face-wrap'>
             {toggleFace ? (
             <div className='btn_wrap face'>
               <button type='button' onClick={onCancelEdit} name='face' className='btn_face cancel'><FontAwesomeIcon icon={faXmark} size='lg'></FontAwesomeIcon></button>
@@ -233,12 +238,15 @@ function Profile() {
               <input type='file' onChange={onChangeProfile} id='edit_profile' accept="image/*" />
               </>
              )}
+             </fieldset>
             </form>
           ) }
         </div>
         <div className='profile_cont'>
           {id === authService.currentUser.uid ? (
             <form onSubmit={onSubmitName} className='profile__wrap'>
+              <legend className='blind'>프로필 이름 설정</legend>
+              <fieldset className='profile__text-wrap'>
               {toggleEditing ? ( // 이름, 코멘트 수정 토글
                 <>
                 <span className='profile_name'>
@@ -296,6 +304,7 @@ function Profile() {
                 </>
                 )}
               </ul>
+              </fieldset>
             </form> ) :  ( // 친구프로필
             <>
             <div className='profile__wrap'>

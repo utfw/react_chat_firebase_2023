@@ -80,6 +80,8 @@ function Login() {
     <div className={`login ${!newAccount&&('login__active')}`}>
       <h1 className='title'>TALK</h1>
       <form onSubmit={onSubmit} className='input'>
+        <legend className='blind'>회원가입/로그인</legend>
+        <fieldset>
         <ul className='input_wrap'>        
         <li>
           <input name='email' type='email' placeholder='카카오계정 (이메일 또는 전화번호)' value={email} onChange={onChange} required />
@@ -97,6 +99,7 @@ function Login() {
           <li><button onClick={onClick} onMouseEnter={()=>{console.log(1)}} name='google'><FontAwesomeIcon icon={faGoogle} /><span>Sign up with Google</span></button></li>
           <li><button onClick={onClick} name='github'><FontAwesomeIcon icon={faGithub} /><span>Sign up with Github</span></button></li>
         </ul>
+        </fieldset>
       </form>
     </div>
   )
