@@ -16,3 +16,4 @@ React를 사용하여 제작한 카카오톡 실습과제입니다.
 - SCSS
 - CSS
 - Firebase
+- Axios
